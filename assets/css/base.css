@@ -1,0 +1,40 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+}
+
+*
+{
+    box-sizing: inherit;
+
+}
+
+html
+{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.grid
+{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width
+{
+    width: 100%; /*Truong hop khuong su dung width = 1200*/
+}
+
+ 
+.grid__row 
+{
+    display: flex; /*cac phan tu trong grid__row
+    nam tren hang ngang*/
+    flex-wrap: wrap; /*khi cac phan tu co do dai 
+    vuot qua grid__row se xuong hang*/
+}
