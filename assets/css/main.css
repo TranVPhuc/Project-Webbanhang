@@ -141,6 +141,21 @@
     background-color: var(--white-color);
     right: 0;
     border: 1px solid #d3d3d3;
+    cursor: default;
+    transform-origin: 90% top  ; /*Thuoc tinh chi ra noi scale*/
+    animation: headerNotifyGrowth ease-in 0.25s;
+    display: none;
+}
+
+@keyframes headerNotifyGrowth{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .header__notify-header{
@@ -156,6 +171,7 @@
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 40px;
+    cursor: text;
 }
 
 .header__notify-list{
@@ -169,6 +185,11 @@
 .header__notify-item:hover
 {
     background-color: #f1f1f1;
+}
+
+.header__navbar-item--hasnotify:hover .header__notify
+{
+    display: block;
 }
 
 .header__notify-item--read{
@@ -195,9 +216,10 @@
 .header__notify-name{
     display: block;
     font-size: 1.4rem;
-    color: var(--black-color);
+    color: var(--text-color);
     font-weight: 400;
     padding-top: 8px;
+    line-height: 1.8rem;
 }
 
 .header__notify-des{
@@ -205,17 +227,22 @@
     font-size: 1.2rem;
     line-height: 1.6rem;
     color: #756f6e;
+    margin-top: 4px;
 }
 
 .header__notify-footer
 {
-    text-align: center;
-    display: block;
+    display: flex;
+
 }
 
 .header__notify-footer-btn
 {
     text-decoration: none;
     color: var(--text-color);
-    padding: 16px 16px;
+    padding: 8px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
 }
