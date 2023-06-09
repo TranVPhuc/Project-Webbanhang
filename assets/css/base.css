@@ -1,4 +1,5 @@
 :root{
+    --primary-color: #ee4d2d;
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
@@ -37,4 +38,15 @@ html
     nam tren hang ngang*/
     flex-wrap: wrap; /*khi cac phan tu co do dai 
     vuot qua grid__row se xuong hang*/
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
 }
